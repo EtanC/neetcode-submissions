@@ -1,0 +1,13 @@
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        # brute force lol 
+        low, high = 0, len(nums) - 1
+        mid = (low + high) // 2
+        while low < high: 
+            mid = (low + high) // 2
+            if nums[mid] > nums[high]:
+                low = mid + 1
+            else:
+                high = mid
+        
+        return nums[left]
